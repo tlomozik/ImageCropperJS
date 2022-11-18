@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cropper</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="cropper.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main>
+      <!-- <header><h1>Image Cropper</h1></header> -->
+      <section class="image-box">
+        <div class="workspace"><img src="" id="frame" /></div>
+      </section>
+
+      <aside>
+        <div class="upload-box">
+          <input
+            type="file"
+            class="form-control"
+            id="input_image"
+            aria-describedby="inputGroupFileAddon04"
+            onchange="upload()"
+            aria-label="Upload"
+          />
+          <button type="button" class="btn btn-danger" onclick="clearImage()">
+            Clear
+          </button>
+        </div>
+
+        <button type="button" class="btn btn-primary btn-lg">Download</button>
+        <div class="tool-box">
+          <div id="zoomIn">
+            <img src="./assets/zoom-in.svg" alt="Zoom in button" />
+          </div>
+          <div id="zoomOut">
+            <img src="./assets/zoom-out.svg" alt="Zoom out button" />
+          </div>
+        </div>
+
+        <div class="tool-box">
+          <div id="flip">
+            <img src="./assets/symmetry-vertical.svg" alt="Symmetry button" />
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="script/cropper.js"></script>
+    <script src="script/main.js"></script>
+  </body>
+</html>
